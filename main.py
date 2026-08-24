@@ -48,6 +48,7 @@ def seleciona_opcao():
 
       if opcao == 1:
          cadastrar_novo_usuario()
+         
 
       elif opcao == 2:
          email = input("Email: ")
@@ -58,7 +59,8 @@ def seleciona_opcao():
          for usuario in usuarios:
             
             if email == usuario[0] and senha == usuario[1]:
-               print('Login encontrado')
+               print('Login encontrado!')
+               usuario_logado = usuario
                encontrou = True
 
          if encontrou == False:
