@@ -62,9 +62,11 @@ def seleciona_opcao():
                print('Login encontrado!')
                usuario_logado = usuario
                encontrou = True
+               menu_usuario(usuario_logado)
+               
 
          if encontrou == False:
-            print("Email não encontrado")
+            print("Email ou senha incorretos.")
          
       elif opcao == 3:
          print(listar_usuarios())
@@ -77,6 +79,52 @@ def seleciona_opcao():
       input("\nEste número não é valido")
       return seleciona_opcao()
   
+def menu_usuario(usuario_logado):
+   while True:
+        os.system('cls')
+
+        print("===========================")
+        print("Bem vindo ao ✈ AIR TRAVEL!")
+        print("===========================")
+        print()
+        print("1 - Comprar passagem")
+        print("2 - Pacotes de viagem")
+        print("3 - Meus dados")
+        print("4 - Destinos")
+        print("5 - Sair")
+        print("\n")
+
+        try:
+         print()  
+         opcao = int(input("Escolha uma opção: "))
+
+         if opcao == 1:
+            print()
+
+         elif opcao == 2:
+            print()
+
+         elif opcao == 3:
+            email = usuario_logado[0]
+            cpf = usuario_logado[2]
+            telefone = usuario_logado[3]
+
+            print(f"Email: {email}")
+            print(f"CPF: {cpf}")
+            print(f"Telefone: {telefone}")
+
+            input("\nPressione Enter para voltar ao menu.")
+
+         elif opcao == 4:
+            print()
+
+         elif opcao == 5:
+            break
+
+         else:
+            print("Obrigado por usar o Air Travel")
+        except ValueError:
+         input("\n Esse número é invalido")
 
 def main():
     exibir_nome_do_programa()
@@ -87,4 +135,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()  
+    main()
