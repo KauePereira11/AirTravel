@@ -97,11 +97,39 @@ def menu_usuario(usuario_logado):
         try:
          print()  
          opcao = int(input("Escolha uma opção: "))
+         print("\n")
 
          if opcao == 1:
+            destino = input("Digite o destino: ")
+            data = input("Digite a data da viagem (DD/MM/AAAA): ")
+            passageiros = int(input("Digite a quantidade de passageiros: "))
+            classe = input("Digite qual classe deseja viajar: ")
+            print("\n")
+
+            print(f"Destino: {destino}")
+            print(f"Data: {data}")
+            print(f"Passageiros: {passageiros}")
+            print(f"Classe: {classe}" )
+
+            confirma_compra = input("Confirmar compra? (sim/não): ").strip().lower()
             print()
 
+            if confirma_compra == "sim":
+               print("Compra confirmada")
+               print("Que legal! Sua passagem foi comprada, acompanhe todo o passo a passo por email e tenha uma excelente viagem!")
+               input("\nPressione Enter para voltar ao menu.")
+
+            else:
+               print("Compra cancelada")
+               input("\nPressione Enter para voltar ao menu.")
+
          elif opcao == 2:
+            origem = input("Digite o local de embarque: ")
+            destino = input("Digite o destino: ")
+            passageiros = int(input("Digite a quantidade de passageiros: "))
+            quartos = int(input("Digite quantos quartos serão: \n"
+            "(obs: Cada quarto tem 2 camas cada.)"))
+
             print()
 
          elif opcao == 3:
