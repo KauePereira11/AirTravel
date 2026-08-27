@@ -130,6 +130,25 @@ def menu_usuario(usuario_logado):
             quartos = int(input("Digite quantos quartos serão: \n"
             "(obs: Cada quarto tem 2 camas cada.)"))
 
+            print("======= RESUMO DO PACOTE =======")
+
+            print(f"Embarque: {origem}")
+            print(f"Destino: {destino}")
+            print(f"Passageiros: {passageiros}")
+            print(f"Quartos: {quartos}")
+
+            confirmar_pacote = input("Confirmar compra do pacote? (sim/não): ").strip().lower()
+            print()
+
+            if confirmar_pacote == "sim":
+               print("Compra confirmada")
+               print("Que legal! Seu pacote foi confirmado!cha")
+               input("\nPressione Enter para voltar ao menu.")
+
+            else:
+               print("Compra cancelada")
+               input("\nPressione Enter para voltar ao menu.")   
+
             print()
 
          elif opcao == 3:
