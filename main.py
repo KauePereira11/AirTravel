@@ -10,6 +10,13 @@ usuarios = [ ['kaue@gmail.com', '12345', '777', '1199999'],
             ['erica@gmail.com', '1234', '666', '1197777']
 ]
 
+destinos_pacotes = ["Miami - EUA",
+                    "Nova York - EUA",
+                    "Washington, D.C. - EUA",
+                    "Madrid - Espanha",
+                    "Barcelona - Espanha",
+                    "Paris - França",
+                    "Nice - França"]
 
 def cadastrar_novo_usuario():
    os.system('cls')
@@ -124,25 +131,17 @@ def menu_usuario(usuario_logado):
                input("\nPressione Enter para voltar ao menu.")
 
          elif opcao == 2:
-            origem = input("Digite o local de embarque: ")
-            destino = input("Digite o destino: ")
-            passageiros = int(input("Digite a quantidade de passageiros: "))
-            quartos = int(input("Digite quantos quartos serão: \n"
-            "(obs: Cada quarto tem 2 camas cada.)"))
-
+            
             print("======= RESUMO DO PACOTE =======")
 
-            print(f"Embarque: {origem}")
-            print(f"Destino: {destino}")
-            print(f"Passageiros: {passageiros}")
-            print(f"Quartos: {quartos}")
+            pacote_viagens()
 
             confirmar_pacote = input("Confirmar compra do pacote? (sim/não): ").strip().lower()
             print()
 
             if confirmar_pacote == "sim":
                print("Compra confirmada")
-               print("Que legal! Seu pacote foi confirmado!cha")
+               print("Que legal! Seu pacote foi confirmado!")
                input("\nPressione Enter para voltar ao menu.")
 
             else:
@@ -173,11 +172,37 @@ def menu_usuario(usuario_logado):
         except ValueError:
          input("\n Esse número é invalido")
 
+def pacote_viagens():
+   try:
+      print("\n")
+      for numero, pacotes in enumerate(destinos_pacotes, start=1):
+         print(f"{numero} - {pacotes}")
+
+         print("\n")
+
+      opcao = int(input("Digite o Destino: "))
+
+      destino_pacote = destinos_pacotes[opcao - 1]
+
+      data_ida = input("Digite a data de ida: ")
+      data_volta = input("Digite a data de volta: ")
+
+      os.system('cls')
+
+      print("\n")
+
+      print(f"{destino_pacote}")
+      print(f"{data_ida}")
+      print(f"{data_volta}")
+      print("\n")
+         
+   except ValueError:
+      print("Você precisa digitar um NÚMERO")
+
 def main():
     exibir_nome_do_programa()
     exibir_opcoes()
     seleciona_opcao()
-
 
 
 
