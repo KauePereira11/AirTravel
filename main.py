@@ -18,6 +18,11 @@ destinos_pacotes = ["Miami - EUA",
                     "Paris - França",
                     "Nice - França"]
 
+info_pacotes = [["The Betsy - South Beach - R$", 7500],
+                ["Loews Miami Beach Hotel - R$", 8200],
+                ["Fontainebleau Miami Beach - R$", 9500]
+]          
+
 def cadastrar_novo_usuario():
    os.system('cls')
    print('Novo Cadastro.')
