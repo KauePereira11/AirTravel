@@ -18,10 +18,63 @@ destinos_pacotes = ["Miami - EUA",
                     "Paris - França",
                     "Nice - França"]
 
-info_pacotes = [["The Betsy - South Beach - R$", 7500],
-                ["Loews Miami Beach Hotel - R$", 8200],
-                ["Fontainebleau Miami Beach - R$", 9500]
-]          
+info_pacotes = [["Miami - The Betsy - South Beach", 7500],
+                ["Miami - Loews Miami Beach Hotel", 8200],
+                ["Miami - Fontainebleau Miami Beach", 9500],
+
+                ["Nova York - New York Marriott Marquis", 8500],
+                ["Nova York - The Times Square EDITION", 9200],
+                ["Nova York - Hyatt Centric Times Square Nova York", 7900],
+
+                ["Washington, D.C. - The Mayflower Hotel", 7800],
+                ["Washington, D.C. - Washington Hilton", 7200],
+                ["Washington, D.C. - The Westin Georgetown", 8000],
+
+                ["Madrid - JW Marriott Hotel Madrid", 7300],
+                ["Madrid - Hotel Montera Madrid", 6800],
+                ["Madrid - Meliá Castilla", 6500],
+
+                ["Barcelona - Hotel ILUNION Barcelona", 6700],
+                ["Barcelona - Hotel Acevi Villarroel", 6300],
+                ["Barcelona - AC Hotel Diagonal L'Illa", 7000],
+
+                ["Paris - Le Bristol Paris", 12000],
+                ["Paris - The Peninsula Paris", 11500],
+                ["Paris - Mandarin Oriental Paris", 10800],
+
+                ["Nice - Hôtel Negresco", 8500],
+                ["Nice - Le Méridien Nice", 7500],
+                ["Nice - Hôtel Aston La Scala", 6800],
+
+                ["Londres - The Savoy", 11000],
+                ["Londres - The Ritz London", 12500],
+                ["Londres - Shangri-La The Shard", 11800],
+
+                ["Lisboa - Four Seasons Hotel Ritz Lisbon", 9000],
+                ["Lisboa - Corinthia Lisbon", 7500],
+                ["Lisboa - Tivoli Avenida Liberdade Lisboa", 8000],
+
+                ["Cancún - Hyatt Ziva Cancun", 9000],
+                ["Cancún - JW Marriott Cancun Resort & Spa", 9500],
+                ["Cancún - NIZUC Resort & Spa", 11000],
+
+                ["Roma - Hotel de Russie", 11000],
+                ["Roma - Rome Cavalieri", 9500],
+                ["Roma - Hotel Eden", 12000],
+
+                ["Amsterdã - Waldorf Astoria Amsterdam", 12000],
+                ["Amsterdã - Hotel Okura Amsterdam", 9500],
+                ["Amsterdã - Kimpton De Witt Amsterdam", 8000],
+
+                ["Oslo - The Thief", 10000],
+                ["Oslo - Grand Hotel Oslo", 8500],
+                ["Oslo - Radisson Blu Plaza Hotel Oslo", 7500],
+
+                ["Berlim - Hotel Adlon Kempinski Berlin", 11000],
+                ["Berlim - The Ritz-Carlton Berlin", 10000],
+                ["Berlim - Hilton Berlin", 7500],
+
+]
 
 def cadastrar_novo_usuario():
    os.system('cls')
@@ -106,10 +159,13 @@ def menu_usuario(usuario_logado):
         print("5 - Sair")
         print("\n")
 
+
         try:
          print()  
          opcao = int(input("Escolha uma opção: "))
          print("\n")
+
+         os.system('cls')
 
          if opcao == 1:
             destino = input("Digite o destino: ")
@@ -182,13 +238,20 @@ def pacote_viagens():
       print("\n")
       for numero, pacotes in enumerate(destinos_pacotes, start=1):
          print(f"{numero} - {pacotes}")
-
-         print("\n")
-
+         
+      print("\n")
       opcao = int(input("Digite o Destino: "))
+      print("\n")
 
       destino_pacote = destinos_pacotes[opcao - 1]
 
+      cidade = destino_pacote.split(" - ")[0]
+      
+      for pacotes in info_pacotes:
+            if cidade in pacotes[0]:    
+               print(f"{pacotes[0]} - R$ {pacotes[1]}")
+
+      print("\n")
       data_ida = input("Digite a data de ida: ")
       data_volta = input("Digite a data de volta: ")
 
@@ -208,8 +271,6 @@ def main():
     exibir_nome_do_programa()
     exibir_opcoes()
     seleciona_opcao()
-
-
 
 if __name__ == "__main__":
     main()
