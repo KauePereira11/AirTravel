@@ -246,23 +246,34 @@ def pacote_viagens():
       destino_pacote = destinos_pacotes[opcao - 1]
 
       cidade = destino_pacote.split(" - ")[0]
+
+      numero = 1
+      hoteis = []
       
       for pacotes in info_pacotes:
             if cidade in pacotes[0]:    
-               print(f"{pacotes[0]} - R$ {pacotes[1]}")
+               print(f"{numero} - {pacotes[0]} - R$ {pacotes[1]}")
+               hoteis.append(pacotes)
+               numero += 1
 
       print("\n")
+      opcao_hotel = int(input("Escolha o hotel: "))
+      print("\n")
+      hotel_escolhido = hoteis[opcao_hotel - 1]
+      print(f"Hotel: {hotel_escolhido[0]}")
+      print(f"Preço: R$ {hotel_escolhido[1]}")
       data_ida = input("Digite a data de ida: ")
       data_volta = input("Digite a data de volta: ")
 
-      os.system('cls')
 
       print("\n")
-
-      print(f"{destino_pacote}")
-      print(f"{data_ida}")
-      print(f"{data_volta}")
-      print("\n")
+      print("======= RESUMO DA COMPRA =======")
+      print(f"Destino: {destino_pacote}")
+      print(f"Hotel: {hotel_escolhido[0]}")
+      print(f"Preço: R$ {hotel_escolhido[1]}")
+      print(f"Data de ida: {data_ida}")
+      print(f"Data de volta: {data_volta}")
+      print()
          
    except ValueError:
       print("Você precisa digitar um NÚMERO")
