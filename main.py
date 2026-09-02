@@ -201,6 +201,28 @@ def menu_usuario(usuario_logado):
             print()
 
             if confirmar_pacote == "sim":
+               print("========= PAGAMENTO =========")
+               print()
+               print("1 - PIX")
+               print("2 - Cartão de crédito")
+               print("3 - Cartão de débito")
+
+               forma_pagamento = int(input("Escolha a forma de pagamento: "))
+
+               if pagamento_valido == 1:
+                  print("Pagamento via PIX")
+
+               elif forma_pagamento == 2:
+                  print("Pagamento via cartão de crédito")
+
+               elif forma_pagamento == 3:
+                  print("Pagamento via cartão de débito")
+
+               else:
+                  print("Forma de pagamento inválida")         
+
+               pagamento_valido = 1
+
                print("Compra confirmada")
                print("Que legal! Seu pacote foi confirmado!")
                input("\nPressione Enter para voltar ao menu.")
