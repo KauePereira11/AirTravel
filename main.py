@@ -200,6 +200,7 @@ def menu_usuario(usuario_logado):
             confirmar_pacote = input("Confirmar compra do pacote? (sim/não): ").strip().lower()
             print()
 
+         
             if confirmar_pacote == "sim":
                print("========= PAGAMENTO =========")
                print()
@@ -207,30 +208,36 @@ def menu_usuario(usuario_logado):
                print("2 - Cartão de crédito")
                print("3 - Cartão de débito")
 
-               forma_pagamento = int(input("Escolha a forma de pagamento: "))
+               pagamento_valido = 0
+               try:
+                  forma_pagamento = int(input("Escolha a forma de pagamento: "))
+         
+                  if forma_pagamento == 1:
+                     print("Pagamento via PIX")
+                     pagamento_valido = 1
 
-               if pagamento_valido == 1:
-                  print("Pagamento via PIX")
+                  elif forma_pagamento == 2:
+                     print("Pagamento via cartão de crédito")
+                     pagamento_valido = 1
 
-               elif forma_pagamento == 2:
-                  print("Pagamento via cartão de crédito")
+                  elif forma_pagamento == 3:
+                     print("Pagamento via cartão de débito")
+                     pagamento_valido = 1
 
-               elif forma_pagamento == 3:
-                  print("Pagamento via cartão de débito")
+                  if pagamento_valido == 1:     
+                     print("Que legal! Seu pacote foi confirmado!")
+                     input("\nPressione Enter para voltar ao menu.")   
 
-               else:
-                  print("Forma de pagamento inválida")         
+                  else:
+                     print("Forma de pagamento inválida")
+                     input("\nPressione Enter para voltar ao menu.")
 
-               pagamento_valido = 1
-
-               print("Compra confirmada")
-               print("Que legal! Seu pacote foi confirmado!")
-               input("\nPressione Enter para voltar ao menu.")
+               except ValueError:
+                  print("Número inválido")
 
             else:
                print("Compra cancelada")
-               input("\nPressione Enter para voltar ao menu.")   
-
+            
             print()
 
          elif opcao == 3:
