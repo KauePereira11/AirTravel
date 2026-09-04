@@ -3,7 +3,7 @@ os.system('cls')
 
 def exibir_nome_do_programa():
   print("=================")
-  print(" ✈  AIR TRAVEL ")
+  print(" ✈  AIR TRAVEL | Sua viagem começa aqui!")
   print("=================")
 
 usuarios = [ ['kaue@gmail.com', '12345', '777', '1199999'],
