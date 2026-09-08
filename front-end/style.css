@@ -1,20 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
   margin: 0;
-  background-color: #2563eb;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f172a;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
-  background-color: #dbeafe;
+  background-color: #1e293b;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-  color: #1e3a8a;
-  font-size: 35px;
-  text-align: center;
+  color: #f8fafc;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 700;
 }
 
 main {
@@ -24,19 +28,20 @@ main {
 section {
   text-align: center;
   display: flex;
-  gap: 20px;
+  gap: 3px;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card-destino {
   padding: 20px;
-  border: 1px solid;
-  border-color: #1e3a8a;
-  background-color: white;
-  width: 300px;
+  border: 0;
+  background-color: #1e293b;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px gray;
+  box-shadow: 0 2px 8px gray;
   transition: 0.3s;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .card-destino img {
@@ -49,4 +54,63 @@ section {
 
 .card-destino:hover {
   transform: scale(1.02);
+}
+
+nav {
+  color: #e2e8f0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e2e8f0;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.destinos {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+h3 {
+  color: #38bdf8;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #334155;
 }
