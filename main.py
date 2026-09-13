@@ -1,5 +1,6 @@
 import os
 os.system('cls')
+from destinos import exibir_continentes, seleciona_continente, seleciona_pais
 
 def exibir_nome_do_programa():
   print("=================")
@@ -134,9 +135,7 @@ def seleciona_opcao():
             print("Email ou senha incorretos.")
          
       elif opcao == 3:
-         print(listar_usuarios())
          listar_usuarios()
-         usuarios[3]
 
       else:
          print('Obrigado por usar o Air Travel.')   
@@ -252,7 +251,7 @@ def menu_usuario(usuario_logado):
             input("\nPressione Enter para voltar ao menu.")
 
          elif opcao == 4:
-            print()
+            destinos()
 
          elif opcao == 5:
             break
@@ -261,6 +260,11 @@ def menu_usuario(usuario_logado):
             print("Obrigado por usar o Air Travel")
         except ValueError:
          input("\n Esse número é invalido")
+
+def destinos():
+   exibir_continentes()
+   continente = seleciona_continente()
+   seleciona_pais(continente)    
 
 def pacote_viagens():
    try:

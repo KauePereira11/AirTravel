@@ -2,12 +2,12 @@
 
 body {
   margin: 0;
-  background-color: #0f172a;
+  background-color: #f8fafc;
   font-family: "Poppins", sans-serif;
 }
 
 header {
-  background-color: #1e293b;
+  background-color: #496591;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@ section {
 .card-destino {
   padding: 20px;
   border: 0;
-  background-color: #1e293b;
+  background-color: #e2e8f0;
   box-sizing: border-box;
   box-shadow: 0 2px 8px gray;
   transition: 0.3s;
@@ -78,40 +78,53 @@ nav a:hover {
   justify-content: center;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h2 {
   margin: 0;
   margin-bottom: 10px;
-  color: #f8fafc;
+  color: #1e293b;
 }
 
 p {
   margin: 0;
   margin-bottom: 15px;
-  color: #cbd5e1;
+  color: #1e293b;
 }
 
 h3 {
-  color: #38bdf8;
+  color: #000;
 }
 
-.botoes {
+.banner {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  margin-top: 0px;
+  text-align: center;
   display: flex;
-  gap: 10px;
+  text-align: center;
   justify-content: center;
-  margin-top: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: #000b;
 }
 
 button {
-  background-color: #1e293b;
-  color: #ffffff;
+  background-color: white;
+  padding: 7px;
   border-radius: 5px;
-  padding: 10px;
+  border: 1px solid;
+  border-color: #b4cff3;
   cursor: pointer;
-  transition: 0.3s;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
 }
 
-button:hover {
-  background-color: #334155;
+.preco {
+  font-size: 17px;
+  color: #373ac4;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
