@@ -3,9 +3,9 @@ os.system('cls')
 from destinos import exibir_continentes, seleciona_continente, seleciona_pais
 
 def exibir_nome_do_programa():
-  print("=================")
+  print("=========================================")
   print(" ✈  AIR TRAVEL | Sua viagem começa aqui!")
-  print("=================")
+  print("=========================================")
 
 usuarios = [ ['kaue@gmail.com', '12345', '777', '1199999'],
             ['erica@gmail.com', '1234', '666', '1197777']

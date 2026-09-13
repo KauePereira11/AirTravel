@@ -213,8 +213,11 @@ def seleciona_pais(continente):
             ):
                 print(f"{numero} - {lugar}")
 
+            input("\nPressione ENTER para continuar.")
+
         elif escolha == 2:
             print(lugares[pais_escolhido]['Curiosidade'])
+            input("\nPressione ENTER para continuar.")
 
         else:
             print('Opção inválida')
@@ -223,8 +226,6 @@ def seleciona_pais(continente):
                 "\nPressione ENTER para voltar."
             )
             return seleciona_pais(continente)
-
-        return seleciona_pais(continente)
 
     except ValueError:
         print("Você precisa digitar um NÚMERO")
