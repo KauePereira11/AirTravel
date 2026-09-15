@@ -8,138 +8,381 @@ continentes = {
 
 lugares = {
     'Japão': {
-        'Pontos Turisticos': ['Monte Fuji', 'Tóquio', 'Quioto'],
-        'Curiosidade': 'O Japão é conhecido pela tecnologia, cultura tradicional e pelos templos históricos.'
+        'Por que conhecer': '''
+O Japão combina tecnologia, cultura tradicional e paisagens incríveis.
+
+Pontos turísticos:
+1 - Monte Fuji
+2 - Tóquio
+3 - Quioto
+
+Curiosidade:
+O Monte Fuji é o ponto mais alto do Japão.
+'''
     },
 
     'China': {
-        'Pontos Turisticos': ['Muralha da China', 'Cidade Proibida', 'Xangai'],
-        'Curiosidade': 'A China possui uma das civilizações mais antigas do mundo.'
+        'Por que conhecer': '''
+A China oferece uma mistura de história milenar, grandes cidades e paisagens naturais.
+
+Pontos turísticos:
+1 - Muralha da China
+2 - Cidade Proibida
+3 - Exército de Terracota
+
+Curiosidade:
+A Muralha da China é uma das construções mais conhecidas do mundo.
+'''
     },
 
     'Coreia do Sul': {
-        'Pontos Turisticos': ['Seul', 'Palácio Gyeongbokgung', 'Busan'],
-        'Curiosidade': 'A Coreia do Sul é conhecida mundialmente pelo K-pop e pela tecnologia.'
+        'Por que conhecer': '''
+A Coreia do Sul combina tecnologia, cultura, gastronomia e tradições antigas com cidades modernas.
+
+Pontos turísticos:
+1 - Seul
+2 - Palácio Gyeongbokgung
+3 - Ilha de Jeju
+
+Curiosidade:
+O K-pop ajudou a tornar a cultura sul-coreana conhecida mundialmente.
+'''
     },
 
     'Tailândia': {
-        'Pontos Turisticos': ['Bangkok', 'Phuket', 'Ilhas Phi Phi'],
-        'Curiosidade': 'A Tailândia é conhecida por suas praias paradisíacas e templos.'
+        'Por que conhecer': '''
+A Tailândia é uma ótima opção para quem busca praias paradisíacas, templos e uma cultura diferente.
+
+Pontos turísticos:
+1 - Bangkok
+2 - Phuket
+3 - Ilhas Phi Phi
+
+Curiosidade:
+A Tailândia possui milhares de ilhas e algumas das praias mais famosas do mundo.
+'''
     },
 
     'Indonésia': {
-        'Pontos Turisticos': ['Bali', 'Jacarta', 'Ilhas Gili'],
-        'Curiosidade': 'A Indonésia possui milhares de ilhas.'
+        'Por que conhecer': '''
+A Indonésia possui praias, templos, natureza e uma cultura muito diversificada.
+
+Pontos turísticos:
+1 - Bali
+2 - Templo de Borobudur
+3 - Ilhas Gili
+
+Curiosidade:
+A Indonésia é formada por milhares de ilhas.
+'''
     },
 
     'Singapura': {
-        'Pontos Turisticos': ['Marina Bay Sands', 'Gardens by the Bay', 'Sentosa'],
-        'Curiosidade': 'Singapura é uma das cidades mais modernas e organizadas da Ásia.'
+        'Por que conhecer': '''
+Singapura impressiona pela arquitetura moderna, tecnologia e atrações que misturam cidade e natureza.
+
+Pontos turísticos:
+1 - Marina Bay Sands
+2 - Gardens by the Bay
+3 - Sentosa
+
+Curiosidade:
+Singapura é uma cidade-estado localizada no Sudeste Asiático.
+'''
     },
 
     'EUA': {
-        'Pontos Turisticos': ['Miami Beach', 'Times Square', 'Estátua da Liberdade'],
-        'Curiosidade': 'Os Estados Unidos possuem uma grande diversidade cultural e turística.'
+        'Por que conhecer': '''
+Os Estados Unidos possuem destinos muito diferentes entre si, desde as praias de Miami até grandes cidades como Nova York.
+
+Pontos turísticos:
+1 - Miami Beach
+2 - Times Square
+3 - Estátua da Liberdade
+
+Curiosidade:
+Os Estados Unidos possuem 50 estados.
+'''
     },
 
     'Canadá': {
-        'Pontos Turisticos': ['Toronto', 'Vancouver', 'Cataratas do Niágara'],
-        'Curiosidade': 'O Canadá é o segundo maior país do mundo em território.'
+        'Por que conhecer': '''
+O Canadá oferece grandes cidades, montanhas, lagos e paisagens naturais impressionantes.
+
+Pontos turísticos:
+1 - Cataratas do Niágara
+2 - Toronto
+3 - Vancouver
+
+Curiosidade:
+O Canadá é o segundo maior país do mundo em território.
+'''
     },
 
     'México': {
-        'Pontos Turisticos': ['Cancún', 'Cidade do México', 'Chichén Itzá'],
-        'Curiosidade': 'O México possui uma rica cultura e antigas civilizações.'
+        'Por que conhecer': '''
+O México combina praias, história, gastronomia e culturas antigas.
+
+Pontos turísticos:
+1 - Cancún
+2 - Chichén Itzá
+3 - Cidade do México
+
+Curiosidade:
+Chichén Itzá foi uma importante cidade da civilização maia.
+'''
     },
 
     'Costa Rica': {
-        'Pontos Turisticos': ['San José', 'Vulcão Arenal', 'Parque Nacional Manuel Antonio'],
-        'Curiosidade': 'A Costa Rica é conhecida por suas florestas e praias.'
-    },
+        'Por que conhecer': '''
+A Costa Rica é ideal para quem gosta de natureza, praias, florestas e aventuras ao ar livre.
 
-    'Chile': {
-        'Pontos Turisticos': ['Deserto do Atacama', 'Santiago', 'Patagônia'],
-        'Curiosidade': 'O Chile é um dos países mais longos do mundo.'
+Pontos turísticos:
+1 - Vulcão Arenal
+2 - Parque Nacional Manuel Antonio
+3 - Monteverde
+
+Curiosidade:
+O país é conhecido por sua grande biodiversidade.
+'''
     },
 
     'Brasil': {
-        'Pontos Turisticos': ['Rio de Janeiro', 'Fernando de Noronha', 'Foz do Iguaçu'],
-        'Curiosidade': 'O Brasil é o maior país da América do Sul.'
-    },
+        'Por que conhecer': '''
+O Brasil possui praias, florestas, cidades históricas e uma enorme diversidade cultural e natural.
 
-    'Peru': {
-        'Pontos Turisticos': ['Machu Picchu', 'Lima', 'Cusco'],
-        'Curiosidade': 'Machu Picchu é um dos destinos turísticos mais famosos do mundo.'
-    },
+Pontos turísticos:
+1 - Cristo Redentor
+2 - Fernando de Noronha
+3 - Foz do Iguaçu
 
-    'Colômbia': {
-        'Pontos Turisticos': ['Cartagena', 'Bogotá', 'Medellín'],
-        'Curiosidade': 'A Colômbia é conhecida pelo café e pelas paisagens naturais.'
-    },
-
-    'Uruguai': {
-        'Pontos Turisticos': ['Montevidéu', 'Punta del Este', 'Colônia do Sacramento'],
-        'Curiosidade': 'O Uruguai é conhecido por suas praias e cidades históricas.'
+Curiosidade:
+O Brasil é o maior país da América do Sul.
+'''
     },
 
     'Argentina': {
-        'Pontos Turisticos': ['Buenos Aires', 'Bariloche', 'Cataratas do Iguaçu'],
-        'Curiosidade': 'A Argentina é famosa pelo tango, futebol e gastronomia.'
+        'Por que conhecer': '''
+A Argentina combina grandes cidades, paisagens naturais, gastronomia e uma cultura muito ligada ao tango e ao futebol.
+
+Pontos turísticos:
+1 - Buenos Aires
+2 - Patagônia
+3 - Cataratas do Iguaçu - lado argentino
+
+Curiosidade:
+A Argentina é o segundo maior país da América do Sul.
+'''
+    },
+
+    'Peru': {
+        'Por que conhecer': '''
+O Peru reúne história, arqueologia, montanhas e uma gastronomia reconhecida internacionalmente.
+
+Pontos turísticos:
+1 - Machu Picchu
+2 - Cusco
+3 - Lima
+
+Curiosidade:
+Machu Picchu foi construída pelos Incas.
+'''
     },
 
     'Bolívia': {
-        'Pontos Turisticos': ['Salar de Uyuni', 'La Paz', 'Lago Titicaca'],
-        'Curiosidade': 'O Salar de Uyuni é o maior deserto de sal do mundo.'
+        'Por que conhecer': '''
+A Bolívia possui paisagens únicas, montanhas, lagos e experiências culturais diferentes.
+
+Pontos turísticos:
+1 - Salar de Uyuni
+2 - La Paz
+3 - Lago Titicaca
+
+Curiosidade:
+O Salar de Uyuni é considerado o maior deserto de sal do mundo.
+'''
+    },
+
+    'Chile': {
+        'Por que conhecer': '''
+O Chile possui paisagens extremamente variadas, desde o deserto até montanhas, lagos e geleiras.
+
+Pontos turísticos:
+1 - Deserto do Atacama
+2 - Santiago
+3 - Patagônia Chilena
+
+Curiosidade:
+O Chile possui um dos territórios mais longos e estreitos do mundo.
+'''
+    },
+
+    'Colômbia': {
+        'Por que conhecer': '''
+A Colômbia combina cidades históricas, praias, montanhas, cultura e uma gastronomia diversificada.
+
+Pontos turísticos:
+1 - Cartagena
+2 - Medellín
+3 - Bogotá
+
+Curiosidade:
+A Colômbia é um dos países mais conhecidos pela produção de café.
+'''
+    },
+
+    'Uruguai': {
+        'Por que conhecer': '''
+O Uruguai é uma opção tranquila para conhecer praias, cidades históricas e a cultura sul-americana.
+
+Pontos turísticos:
+1 - Montevidéu
+2 - Punta del Este
+3 - Colônia do Sacramento
+
+Curiosidade:
+Colônia do Sacramento possui um centro histórico reconhecido pela UNESCO.
+'''
     },
 
     'França': {
-        'Pontos Turisticos': ['Torre Eiffel', 'Museu do Louvre', 'Nice'],
-        'Curiosidade': 'A França é um dos países mais visitados do mundo.'
+        'Por que conhecer': '''
+A França é conhecida por sua história, arte, arquitetura e gastronomia.
+
+Pontos turísticos:
+1 - Torre Eiffel
+2 - Museu do Louvre
+3 - Palácio de Versalhes
+
+Curiosidade:
+A Torre Eiffel foi construída para a Exposição Universal de 1889.
+'''
     },
 
     'Espanha': {
-        'Pontos Turisticos': ['Madrid', 'Barcelona', 'Sevilha'],
-        'Curiosidade': 'A Espanha possui uma cultura muito rica e diversa.'
+        'Por que conhecer': '''
+A Espanha reúne praias, cidades históricas, arquitetura, gastronomia e culturas regionais.
+
+Pontos turísticos:
+1 - Sagrada Família
+2 - Palácio Real de Madrid
+3 - Alhambra
+
+Curiosidade:
+A Sagrada Família, em Barcelona, foi projetada por Antoni Gaudí.
+'''
     },
 
     'Portugal': {
-        'Pontos Turisticos': ['Lisboa', 'Porto', 'Algarve'],
-        'Curiosidade': 'Portugal possui forte ligação histórica e cultural com o Brasil.'
+        'Por que conhecer': '''
+Portugal combina história, belas cidades, praias, gastronomia e uma forte ligação cultural com o Brasil.
+
+Pontos turísticos:
+1 - Torre de Belém
+2 - Palácio da Pena
+3 - Centro Histórico do Porto
+
+Curiosidade:
+Portugal possui uma das fronteiras mais antigas e estáveis da Europa.
+'''
     },
 
     'Inglaterra': {
-        'Pontos Turisticos': ['Londres', 'Big Ben', 'Palácio de Buckingham'],
-        'Curiosidade': 'Londres é uma das cidades mais visitadas da Europa.'
+        'Por que conhecer': '''
+A Inglaterra oferece história, cultura, arquitetura, futebol e cidades famosas como Londres.
+
+Pontos turísticos:
+1 - Big Ben
+2 - Palácio de Buckingham
+3 - Stonehenge
+
+Curiosidade:
+Stonehenge é um dos monumentos pré-históricos mais famosos do mundo.
+'''
     },
 
     'Itália': {
-        'Pontos Turisticos': ['Roma', 'Veneza', 'Coliseu'],
-        'Curiosidade': 'A Itália é conhecida por sua história, arte e gastronomia.'
+        'Por que conhecer': '''
+A Itália é perfeita para quem gosta de história, arte, arquitetura e gastronomia.
+
+Pontos turísticos:
+1 - Coliseu
+2 - Vaticano
+3 - Canais de Veneza
+
+Curiosidade:
+O Coliseu foi construído há quase dois mil anos.
+'''
     },
 
     'Grécia': {
-        'Pontos Turisticos': ['Atenas', 'Santorini', 'Mykonos'],
-        'Curiosidade': 'A Grécia é considerada o berço de parte da civilização ocidental.'
+        'Por que conhecer': '''
+A Grécia combina praias, ilhas paradisíacas, história antiga e uma cultura que influenciou o mundo.
+
+Pontos turísticos:
+1 - Acrópole de Atenas
+2 - Santorini
+3 - Mykonos
+
+Curiosidade:
+A Acrópole de Atenas possui mais de dois mil anos de história.
+'''
     },
 
     'Suiça': {
-        'Pontos Turisticos': ['Zurique', 'Alpes Suíços', 'Genebra'],
-        'Curiosidade': 'A Suíça é conhecida pelos Alpes, chocolates e relógios.'
+        'Por que conhecer': '''
+A Suíça é conhecida pelas montanhas, lagos, cidades organizadas, chocolates e belas paisagens.
+
+Pontos turísticos:
+1 - Alpes Suíços
+2 - Lago de Genebra
+3 - Zurique
+
+Curiosidade:
+A Suíça possui quatro idiomas oficiais.
+'''
     },
 
     'Holanda': {
-        'Pontos Turisticos': ['Amsterdã', 'Museu Van Gogh', 'Keukenhof'],
-        'Curiosidade': 'A Holanda é famosa pelos canais, bicicletas e tulipas.'
+        'Por que conhecer': '''
+A Holanda combina cidades charmosas, canais, museus, bicicletas e paisagens repletas de flores.
+
+Pontos turísticos:
+1 - Canais de Amsterdã
+2 - Museu Van Gogh
+3 - Keukenhof
+
+Curiosidade:
+As bicicletas fazem parte do cotidiano de grande parte da população holandesa.
+'''
     },
 
     'Alemanha': {
-        'Pontos Turisticos': ['Berlim', 'Munique', 'Castelo de Neuschwanstein'],
-        'Curiosidade': 'A Alemanha possui uma forte história e cultura.'
+        'Por que conhecer': '''
+A Alemanha possui cidades modernas, castelos, muita história e uma cultura bastante diversificada.
+
+Pontos turísticos:
+1 - Portão de Brandemburgo
+2 - Castelo de Neuschwanstein
+3 - Muro de Berlim
+
+Curiosidade:
+O Muro de Berlim caiu em 1989 e se tornou um símbolo do fim da Guerra Fria.
+'''
     },
 
     'Noruega': {
-        'Pontos Turisticos': ['Oslo', 'Fiordes Noruegueses', 'Tromsø'],
-        'Curiosidade': 'A Noruega é conhecida pelos fiordes e pela aurora boreal.'
+        'Por que conhecer': '''
+A Noruega é ideal para quem gosta de natureza, montanhas, fiordes e aurora boreal.
+
+Pontos turísticos:
+1 - Fiordes Noruegueses
+2 - Oslo
+3 - Tromsø
+
+Curiosidade:
+Tromsø é conhecida como um dos lugares onde é possível observar a aurora boreal.
+'''
     }
 }
 
@@ -189,43 +432,16 @@ def seleciona_pais(continente):
         escolha = int(input("Escolha um país: "))
 
         paises = continentes[continente]
+
+        if escolha < 1 or escolha > len(paises):
+          print("Opção inválida")
+          input("\nPressione ENTER para tentar novamente.")
+          return seleciona_pais(continente)
+
         pais_escolhido = paises[escolha - 1]
 
-        print()
-        print(f"Legal! Você escolheu {pais_escolhido}:")
-        print()
-
-        print('Lugares turísticos deste país que quero conhecer:')
-        print()
-
-        for numero, lugar in enumerate(lugares[pais_escolhido], start=1):
-            print(f"{numero} - {lugar}")
-
-        print()
-
-        escolha = int(input('Escolha uma opção: '))
-        print()
-
-        if escolha == 1:
-            for numero, lugar in enumerate(
-                lugares[pais_escolhido]['Pontos Turisticos'],
-                start=1
-            ):
-                print(f"{numero} - {lugar}")
-
-            input("\nPressione ENTER para continuar.")
-
-        elif escolha == 2:
-            print(lugares[pais_escolhido]['Curiosidade'])
-            input("\nPressione ENTER para continuar.")
-
-        else:
-            print('Opção inválida')
-            input(
-                "\nVocê precisa digitar um número válido."
-                "\nPressione ENTER para voltar."
-            )
-            return seleciona_pais(continente)
+        print(lugares[pais_escolhido]['Por que conhecer'])
+        input("\nPressione ENTER para continuar.")
 
     except ValueError:
         print("Você precisa digitar um NÚMERO")

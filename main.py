@@ -108,40 +108,45 @@ def exibir_opcoes():
   print("4 - Sair :")
 
 def seleciona_opcao():
-   try:
-      print()
-      opcao = int(input('Escolha uma opção: '))
+   while True:
+      try:
+         print()
+         opcao = int(input('Escolha uma opção: '))
 
-      if opcao == 1:
-         cadastrar_novo_usuario()
+         if opcao == 1:
+            cadastrar_novo_usuario()
          
 
-      elif opcao == 2:
-         email = input("Email: ")
-         senha = input("Senha: ")
+         elif opcao == 2:
+            email = input("Email: ")
+            senha = input("Senha: ")
 
-         encontrou = False
+            encontrou = False
 
-         for usuario in usuarios:
+            for usuario in usuarios:
             
-            if email == usuario[0] and senha == usuario[1]:
-               print('Login encontrado!')
-               usuario_logado = usuario
-               encontrou = True
-               menu_usuario(usuario_logado)
+               if email == usuario[0] and senha == usuario[1]:
+                  print('Login encontrado!')
+                  usuario_logado = usuario
+                  encontrou = True
+                  menu_usuario(usuario_logado)
                
 
-         if encontrou == False:
-            print("Email ou senha incorretos.")
+            if encontrou == False:
+               print("Email ou senha incorretos.")
          
-      elif opcao == 3:
-         listar_usuarios()
+         elif opcao == 3:
+            listar_usuarios()
 
-      else:
-         print('Obrigado por usar o Air Travel.')   
-   except ValueError:
-      input("\nEste número não é valido")
-      return seleciona_opcao()
+         elif opcao == 4:
+            print('Obrigado por usar o Air Travel.')
+            break
+
+         else:
+            print('Opção inválida')   
+      except ValueError:
+         input("\nEste número não é valido")
+         return seleciona_opcao()
   
 def menu_usuario(usuario_logado):
    while True:
@@ -254,10 +259,12 @@ def menu_usuario(usuario_logado):
             destinos()
 
          elif opcao == 5:
+            print("Obrigado por usar o Air Travel")
             break
+            
 
          else:
-            print("Obrigado por usar o Air Travel")
+            print("Opção inválida")
         except ValueError:
          input("\n Esse número é invalido")
 
@@ -271,9 +278,15 @@ def pacote_viagens():
       print("\n")
       for numero, pacotes in enumerate(destinos_pacotes, start=1):
          print(f"{numero} - {pacotes}")
-         
+                  
       print("\n")
       opcao = int(input("Digite o Destino: "))
+
+      if opcao < 1 or opcao > len(destinos_pacotes):
+         print("Opção inválida")
+         input("\nPressione ENTER para tentar novamente.")
+         return pacote_viagens()
+
       print("\n")
 
       destino_pacote = destinos_pacotes[opcao - 1]
@@ -284,28 +297,44 @@ def pacote_viagens():
       hoteis = []
       
       for pacotes in info_pacotes:
-            if cidade in pacotes[0]:    
-               print(f"{numero} - {pacotes[0]} - R$ {pacotes[1]}")
-               hoteis.append(pacotes)
-               numero += 1
+         if cidade in pacotes[0]:    
+            print(f"{numero} - {pacotes[0]} - R$ {pacotes[1]}")
+            hoteis.append(pacotes)
+            numero += 1
 
       print("\n")
       opcao_hotel = int(input("Escolha o hotel: "))
       print("\n")
+      if opcao_hotel < 1 or opcao_hotel > len(hoteis):
+       print("Opção inválida")
+       input("\nPressione ENTER para tentar novamente.")
+       return pacote_viagens()
       hotel_escolhido = hoteis[opcao_hotel - 1]
       print(f"Hotel: {hotel_escolhido[0]}")
       print(f"Preço: R$ {hotel_escolhido[1]}")
       data_ida = input("Digite a data de ida: ")
+      data_ida = data_ida.split("/")
       data_volta = input("Digite a data de volta: ")
 
+      while len(data_ida) != 3:
+         print("Data inválida")
+         data_ida = input("Digite a data de ida novamente: ")
+         data_ida = data_ida.split("/")
+
+      data_volta = data_volta.split("/")
+
+      while len(data_volta) != 3:
+         print("Data inválida")
+         data_volta = input("Digite a data de volta novamente: ")
+         data_volta = data_volta.split("/")   
 
       print("\n")
       print("======= RESUMO DA COMPRA =======")
       print(f"Destino: {destino_pacote}")
       print(f"Hotel: {hotel_escolhido[0]}")
       print(f"Preço: R$ {hotel_escolhido[1]}")
-      print(f"Data de ida: {data_ida}")
-      print(f"Data de volta: {data_volta}")
+      print(f"Data de ida: {'/'.join(data_ida)}")
+      print(f"Data de volta: {'/'.join(data_volta)}")      
       print()
          
    except ValueError:
