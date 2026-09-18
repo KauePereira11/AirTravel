@@ -7,11 +7,16 @@ body {
 }
 
 header {
-  background-color: #496591;
+  background-image: url("./banner.avif");
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.banner {
+  padding: 20px;
 }
 
 h1 {
@@ -27,21 +32,15 @@ main {
 
 section {
   text-align: center;
-  display: flex;
-  gap: 3px;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .card-destino {
-  padding: 20px;
-  border: 0;
+  width: 350px;
+  min-height: 420px;
   background-color: #e2e8f0;
-  box-sizing: border-box;
   box-shadow: 0 2px 8px gray;
-  transition: 0.3s;
-  max-width: 300px;
-  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .card-destino img {
@@ -53,7 +52,11 @@ section {
 }
 
 .card-destino:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+}
+
+.card-destino p {
+  text-align: left;
 }
 
 nav {
@@ -79,6 +82,7 @@ nav a:hover {
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -109,8 +113,27 @@ button {
 }
 
 .preco {
-  font-size: 17px;
-  color: #373ac4;
+  font-size: 14px;
+  color: #0206fa;
   font-family: Arial, sans-serif;
   font-weight: bold;
+}
+
+.preco strong {
+  font-size: 16px;
+}
+
+.card-destino button {
+  background-color: #0f0fd2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-destino button:hover {
+  transform: scale(1.05);
 }
