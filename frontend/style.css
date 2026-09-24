@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #334155;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: #f8fafc;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 700;
+}
+
+nav {
+  font-size: 18px;
+  color: #e2e8f0;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+main {
+  padding: 20px;
+}
+
+.titulo-destinos {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-destinos h2 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.titulo-destinos p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.titulo-destinos h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #334155;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.destinos {
+  display: flex;
+  padding: 10px;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.card-destino {
+  width: 350px;
+  min-height: 470px;
+  background-color: #e2e8f0;
+  box-shadow: 0 2px 8px gray;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-destino:hover {
+  transform: scale(1.02);
+}
+
+.card-destino h3 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.card-destino img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.info-voo {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.descricao {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  padding: 0 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: left;
+  min-height: 42px;
+}
+
+.preco {
+  font-size: 13px;
+  color: #64748b;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  min-height: 24px;
+  padding-left: 20px;
+}
+
+.preco strong {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+button {
+  background-color: white;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #b4cff3;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.card-destino button {
+  margin-top: auto;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.card-destino button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+footer {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  margin-top: 70px;
+  padding-top: 35px;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 40px 30px;
+}
+
+.footer-logo h3 {
+  margin: 0 0 5px;
+  color: white;
+  font-size: 20px;
+}
+
+.footer-logo p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(3px);
+}
+
+.footer-contato p {
+  margin: 0 0 8px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
