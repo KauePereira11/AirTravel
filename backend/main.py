@@ -16,6 +16,7 @@ def exibir_nome_do_programa():
     print(" ✈  AIR TRAVEL | Sua viagem começa aqui!")
     print("=========================================")
 
+
 destinos_pacotes = [
     "Miami - EUA",
     "Nova York - EUA",
@@ -91,10 +92,41 @@ def cadastrar_novo_usuario():
 
     print('Novo Cadastro.')
 
-    email = input("Email: ")
-    senha = input("Senha: ")
-    cpf = input("CPF: ")
-    telefone = input("Telefone: ")
+    # Validação do email
+    while True:
+        email = input("Email: ")
+
+        if "@" in email and email.endswith(".com"):
+            break
+
+        print("Email inválido. Digite um email válido.")
+
+    # Validação da senha
+    while True:
+        senha = input("Senha: ")
+
+        if any(not caractere.isalnum() for caractere in senha):
+            break
+
+        print("Senha inválida. Digite pelo menos um caractere especial.")
+
+    # Validação do CPF
+    while True:
+        cpf = input("CPF: ")
+
+        if cpf.isdigit() and len(cpf) == 11:
+            break
+
+        print("CPF inválido. Digite exatamente 11 números.")
+
+    # Validação do telefone
+    while True:
+        telefone = input("Telefone: ")
+
+        if telefone.isdigit() and len(telefone) == 11:
+            break
+
+        print("Telefone inválido. Digite 11 números.")
 
     cadastrar_usuario(email, senha, cpf, telefone)
 
