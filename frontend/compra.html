@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Air Travel - Comprar passagem</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="#">Passagens</a>
+        <a href="#">Pacotes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="compra-passagem">
+        <div class="titulo-compra">
+          <h2>Comprar passagem</h2>
+          <p>Preencha os dados da sua viagem.</p>
+        </div>
+
+        <form class="formulario-compra">
+          <div class="campo">
+            <label for="origem">Origem</label>
+            <input
+              type="text"
+              id="origem"
+              placeholder="Digite sua cidade de origem"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="destino">Destino</label>
+            <input type="text" id="destino" placeholder="Digite seu destino" />
+          </div>
+
+          <div class="tipo-viagem">
+            <p>Tipo de viagem</p>
+
+            <label>
+              <input type="radio" name="tipo-viagem" value="ida" checked />
+              Somente ida
+            </label>
+
+            <label>
+              <input type="radio" name="tipo-viagem" value="ida-volta" />
+              Ida e volta
+            </label>
+          </div>
+
+          <div class="datas-viagem">
+            <div class="campo">
+              <label for="data-ida">Data de ida</label>
+              <input type="date" id="data-ida" />
+            </div>
+
+            <div class="campo">
+              <label for="data-volta">Data de volta</label>
+              <input type="date" id="data-volta" />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="classe">Classe</label>
+
+            <select id="classe">
+              <option value="economica">Econômica</option>
+              <option value="executiva">Executiva</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="passageiros">Passageiros</label>
+
+            <input type="number" id="passageiros" min="1" value="1" />
+          </div>
+
+          <div class="resumo-compra">
+            <span>Valor da passagem</span>
+            <strong>R$ 2.850</strong>
+          </div>
+
+          <button type="submit">Continuar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-conteudo">
+        <div class="footer-logo">
+          <h3>✈ AIR TRAVEL</h3>
+          <p>Sua viagem começa aqui.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Início</a>
+          <a href="destinos.html">Destinos</a>
+          <a href="#">Passagens</a>
+          <a href="#">Pacotes</a>
+        </div>
+
+        <div class="footer-contato">
+          <p>📧 contato@airtravel.com</p>
+          <p>📱 (11) 99999-9999</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Air Travel. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
-
-    <title>Air Travel - Destino</title>
+    <title>Air Travel - Login</title>
   </head>
 
   <body>
@@ -22,34 +20,30 @@
     </header>
 
     <main>
-      <section class="detalhes-destino">
-        <h2>Miami</h2>
-
-        <img src="miami.jpg" alt="Miami" />
-
-        <div class="informacoes-destino">
-          <h3>Conheça Miami</h3>
-
-          <p>
-            Praias, sol e muita diversão na Flórida. Descubra Miami e aproveite
-            suas praias, paisagens e atrações.
-          </p>
-
-          <div class="info-viagem">
-            <p><strong>✈ Tipo:</strong> Somente ida</p>
-            <p><strong>💺 Classe:</strong> Econômica</p>
-            <p><strong>👤 Passageiros:</strong> 1</p>
-          </div>
-
-          <div class="preco-destino">
-            <span>A partir de</span>
-            <strong>R$ 2.850</strong>
-          </div>
-
-          <a href="compra.html?destino=miami" class="botao-compra"
-            >Comprar passagem</a
-          >
+      <section class="login">
+        <div class="titulo-login">
+          <h2>Entrar na sua conta</h2>
+          <p>Acesse sua conta para continuar sua viagem.</p>
         </div>
+
+        <form class="formulario-login">
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" />
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" />
+          </div>
+
+          <button type="submit">Entrar</button>
+
+          <p class="criar-conta">
+            Ainda não possui uma conta?
+            <a href="cadastro.html">Criar conta</a>
+          </p>
+        </form>
       </section>
     </main>
 
@@ -68,8 +62,8 @@
         </div>
 
         <div class="footer-contato">
-          <p>📧 contato@airtravel.com</p>
-          <p>📱 (11) 99999-9999</p>
+          <p>📧 kaue.c.pereiira@gmail.com</p>
+          <p>📱 (11)98145-0011</p>
         </div>
       </div>
 
