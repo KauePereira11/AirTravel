@@ -1,14 +1,35 @@
 import os
 os.system('cls')
 
-from destinos import exibir_continentes, seleciona_continente, seleciona_pais
+from fastapi import FastAPI, Form
+from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from database import (
+from backend.destinos import exibir_continentes, seleciona_continente, seleciona_pais
+
+from backend.database import (
     criar_tabela_usuarios,
     cadastrar_usuario,
     listar_usuarios,
     buscar_usuario
 )
+
+app = FastAPI()
+app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+
+@app.post("/login")
+def login(email: str = Form(...), senha: str = Form(...)):
+    usuario = buscar_usuario(email, senha)
+
+    if usuario:
+        return RedirectResponse(url="/destinos.html", status_code=303)
+
+    return {"mensagem": "E-mail ou senha inválidos."}
+
+
+@app.get("/destinos.html")
+def pagina_destinos():
+    return FileResponse("frontend/destinos.html")
 
 
 def exibir_nome_do_programa():
@@ -85,7 +106,6 @@ info_pacotes = [
     ["Berlim - The Ritz-Carlton Berlin", 10000],
     ["Berlim - Hilton Berlin", 7500]
 ]
-
 
 def cadastrar_novo_usuario():
     os.system('cls')

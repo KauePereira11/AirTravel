@@ -26,15 +26,29 @@
           <p>Acesse sua conta para continuar sua viagem.</p>
         </div>
 
-        <form class="formulario-login">
+        <form
+          class="formulario-login"
+          action="http://127.0.0.1:8000/login"
+          method="post"
+        >
           <div class="campo">
             <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+            />
           </div>
 
           <div class="campo">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha" />
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+            />
           </div>
 
           <button type="submit">Entrar</button>
