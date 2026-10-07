@@ -388,8 +388,7 @@ Tromsø é conhecida como um dos lugares onde é possível observar a aurora bor
 
 
 def exibir_continentes():
-    for numero, continente in enumerate(continentes, start=1):
-        print(f"{numero} - {continente}")
+    return continentes
 
 
 def seleciona_continente():

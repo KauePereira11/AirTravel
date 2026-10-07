@@ -1,11 +1,13 @@
 import os
 os.system('cls')
 
-from fastapi import FastAPI, Form
+from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 from backend.destinos import exibir_continentes, seleciona_continente, seleciona_pais
+
 
 from backend.database import (
     criar_tabela_usuarios,
@@ -16,6 +18,8 @@ from backend.database import (
 
 app = FastAPI()
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+
+templates = Jinja2Templates(directory="frontend")
 
 @app.post("/login")
 def login(email: str = Form(...), senha: str = Form(...)):
@@ -28,8 +32,14 @@ def login(email: str = Form(...), senha: str = Form(...)):
 
 
 @app.get("/destinos.html")
-def pagina_destinos():
-    return FileResponse("frontend/destinos.html")
+def pagina_destinos(request: Request):
+    return templates.TemplateResponse(
+    request=request,
+    name="destinos.html",
+    context={
+        "continentes": exibir_continentes()
+    }
+)
 
 
 def exibir_nome_do_programa():
