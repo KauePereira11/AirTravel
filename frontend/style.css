@@ -504,3 +504,9 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(255, 122, 0, 0.35);
 }
+
+.continente {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}

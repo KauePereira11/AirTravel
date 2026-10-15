@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="/frontend/style.css" />
 
-    <title>Air Travel - Destino</title>
+    <title>Air Travel - Destinos</title>
   </head>
 
   <body>
@@ -14,8 +14,8 @@
       <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
 
       <nav>
-        <a href="index.html">Início</a>
-        <a href="destinos.html">Destinos</a>
+        <a href="/frontend/index.html">Início</a>
+        <a href="/destinos.html">Destinos</a>
         <a href="#">Passagens</a>
         <a href="#">Pacotes</a>
       </nav>
@@ -23,8 +23,18 @@
 
     <main>
       <section class="detalhes-destino">
-        {% for continente in continentes %}
-        <h2>{{ continente }}</h2>
+        <h2>Destinos disponíveis</h2>
+
+        {% for continente, paises in continentes.items() %}
+        <div class="continente">
+          <h2>{{ continente }}</h2>
+
+          <ul>
+            {% for pais in paises %}
+            <li>{{ pais }}</li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
       </section>
     </main>
@@ -37,8 +47,8 @@
         </div>
 
         <div class="footer-links">
-          <a href="index.html">Início</a>
-          <a href="destinos.html">Destinos</a>
+          <a href="/frontend/index.html">Início</a>
+          <a href="/destinos.html">Destinos</a>
           <a href="#">Passagens</a>
           <a href="#">Pacotes</a>
         </div>
