@@ -510,3 +510,26 @@ footer {
   margin-bottom: 15px;
   border-bottom: 1px solid #e2e8f0;
 }
+
+@media (max-width: 1150px) {
+  .destinos {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+
+@media (max-width: 750px) {
+  .destinos {
+    grid-template-columns: minmax(0, 350px);
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
