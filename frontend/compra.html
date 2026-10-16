@@ -26,19 +26,25 @@
           <p>Preencha os dados da sua viagem.</p>
         </div>
 
-        <form class="formulario-compra">
+        <form class="formulario-compra" action="/buscar-passagens" method="get">
           <div class="campo">
             <label for="origem">Origem</label>
             <input
               type="text"
               id="origem"
+              name="origem"
               placeholder="Digite sua cidade de origem"
             />
           </div>
 
           <div class="campo">
             <label for="destino">Destino</label>
-            <input type="text" id="destino" placeholder="Digite seu destino" />
+            <input
+              type="text"
+              id="destino"
+              name="destino"
+              placeholder="Digite seu destino"
+            />
           </div>
 
           <div class="tipo-viagem">
@@ -58,16 +64,16 @@
           <div class="datas-viagem">
             <div class="campo">
               <label for="data-ida">Data de ida</label>
-              <input type="date" id="data-ida" />
+              <input type="date" id="data-ida" name="data-ida" />
             </div>
 
             <div class="campo">
               <label for="data-volta">Data de volta</label>
-              <input type="date" id="data-volta" />
+              <input type="date" id="data-volta" name="data-volta" />
             </div>
           </div>
 
-          <div class="campo">
+          <div class="campo" name="classe">
             <label for="classe">Classe</label>
 
             <select id="classe">
@@ -79,7 +85,13 @@
           <div class="campo">
             <label for="passageiros">Passageiros</label>
 
-            <input type="number" id="passageiros" min="1" value="1" />
+            <input
+              type="number"
+              id="passageiros"
+              name="passageiros"
+              min="1"
+              value="1"
+            />
           </div>
 
           <div class="resumo-compra">
@@ -107,8 +119,8 @@
         </div>
 
         <div class="footer-contato">
-          <p>📧 contato@airtravel.com</p>
-          <p>📱 (11) 99999-9999</p>
+          <p>📧 kaue.c.pereiira@gmail.com</p>
+          <p>📱 (11) 98145-0011</p>
         </div>
       </div>
 

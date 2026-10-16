@@ -1,4 +1,5 @@
 import os
+from html import escape
 os.system('cls')
 
 from fastapi import FastAPI, Form, Request
@@ -40,7 +41,39 @@ def pagina_destinos(request: Request):
         "continentes": exibir_continentes()
     }
 )
+@app.get("/buscar-passagens", response_class=HTMLResponse)
+def buscar_passagens(request: Request):
+    origem = escape(request.query_params.get("origem", "").strip())
+    destino = escape(request.query_params.get("destino", "").strip())
 
+    if not origem or not destino:
+        return HTMLResponse(
+            "<h2>Preencha a origem e o destino.</h2>"
+            '<a href="/frontend/compra.html">Voltar</a>',
+            status_code=400
+        )
+
+    return f"""
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Voos encontrados - AirTravel</title>
+    </head>
+    <body>
+        <h1>Voos encontrados</h1>
+        <p>Origem: {origem}</p>
+        <p>Destino: {destino}</p>
+
+        <h2>Opções de voos</h2>
+        <p>AirTravel Express — 08:00 — R$ 850,00</p>
+        <p>Voo Nacional — 13:30 — R$ 1.120,00</p>
+        <p>Conexão Aérea — 19:15 — R$ 980,00</p>
+
+        <a href="/frontend/compra.html">Voltar à busca</a>
+    </body>
+    </html>
+    """
 
 def exibir_nome_do_programa():
     print("=========================================")
