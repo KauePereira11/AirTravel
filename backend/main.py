@@ -45,6 +45,10 @@ def pagina_destinos(request: Request):
 def buscar_passagens(request: Request):
     origem = escape(request.query_params.get("origem", "").strip())
     destino = escape(request.query_params.get("destino", "").strip())
+    data_ida = escape(request.query_params.get("data-ida", ""))
+    data_volta = escape(request.query_params.get("data-volta", ""))
+    classe = escape(request.query_params.get("classe", "economica"))
+    passageiros = escape(request.query_params.get("passageiros", "1"))
 
     if not origem or not destino:
         return HTMLResponse(
@@ -64,6 +68,10 @@ def buscar_passagens(request: Request):
         <h1>Voos encontrados</h1>
         <p>Origem: {origem}</p>
         <p>Destino: {destino}</p>
+        <p>Data de ida: {data_ida or "Não informada"}</p>
+        <p>Data de volta: {data_volta or "Não informada"}</p>
+        <p>Classe: {classe}</p>
+        <p>Passageiros: {passageiros}</p>
 
         <h2>Opções de voos</h2>
         <p>AirTravel Express — 08:00 — R$ 850,00</p>
