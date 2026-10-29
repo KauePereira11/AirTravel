@@ -25,17 +25,11 @@
       <section class="detalhes-destino">
         <h2>Destinos disponíveis</h2>
 
-        {% for continente, paises in continentes.items() %}
-        <div class="continente">
-          <h2>{{ continente }}</h2>
-
-          <ul>
-            {% for pais in paises %}
-            <li>{{ pais }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endfor %}
+        <ul>
+          {% for destino in destinos %}
+          <li>{{ destino }}</li>
+          {% endfor %}
+        </ul>
       </section>
     </main>
 

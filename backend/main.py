@@ -7,8 +7,6 @@ from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from backend.destinos import exibir_continentes, seleciona_continente, seleciona_pais
-
 
 from backend.database import (
     criar_tabela_usuarios,
@@ -35,12 +33,12 @@ def login(email: str = Form(...), senha: str = Form(...)):
 @app.get("/destinos.html")
 def pagina_destinos(request: Request):
     return templates.TemplateResponse(
-    request=request,
-    name="destinos.html",
-    context={
-        "continentes": exibir_continentes()
-    }
-)
+        request=request,
+        name="destinos.html",
+        context={
+            "destinos": destinos_pacotes
+        }
+    )
 @app.get("/buscar-passagens", response_class=HTMLResponse)
 def buscar_passagens(request: Request):
     origem = escape(request.query_params.get("origem", "").strip())
@@ -402,9 +400,12 @@ def menu_usuario(usuario_logado):
 
 
 def destinos():
-    exibir_continentes()
-    continente = seleciona_continente()
-    seleciona_pais(continente)
+    print("\n======= DESTINOS DISPONÍVEIS =======")
+
+    for numero, destino in enumerate(destinos_pacotes, start=1):
+        print(f"{numero} - {destino}")
+
+    input("\nPressione ENTER para voltar ao menu.")
 
 
 def pacote_viagens():
