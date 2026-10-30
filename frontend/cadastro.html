@@ -3,7 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Air Travel - Criar conta</title>
+    <link rel="stylesheet" href="/frontend/style.css" />
+    <title>Criar Conta - AirTravel</title>
   </head>
+  <body>
+    <header>
+      <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
+      <nav>
+        <a href="/frontend/index.html">Início</a>
+        <a href="/frontend/login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="formulario-conta">
+        <h2>Criar sua conta</h2>
+        <p class="subtitulo">
+          Cadastre-se para começar a planejar sua próxima viagem.
+        </p>
+
+        <form action="/cadastro" method="post">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@exemplo.com"
+            required
+          />
+
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Crie uma senha segura"
+            required
+          />
+
+          <label for="cpf">CPF</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            maxlength="11"
+            pattern="[0-9]{11}"
+            placeholder="Somente números"
+            required
+          />
+
+          <label for="telefone">Telefone</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            maxlength="11"
+            pattern="[0-9]{11}"
+            placeholder="DDD + número"
+            required
+          />
+
+          <button type="submit">Criar minha conta</button>
+        </form>
+
+        <a href="/frontend/login.html" class="link-conta">
+          Já tem uma conta? <strong>Fazer login</strong>
+        </a>
+      </section>
+    </main>
+  </body>
 </html>

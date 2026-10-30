@@ -29,16 +29,24 @@ def login(email: str = Form(...), senha: str = Form(...)):
 
     return {"mensagem": "E-mail ou senha inválidos."}
 
+@app.post("/cadastro")
+def cadastro(
+    email: str = Form(...),
+    senha: str = Form(...),
+    cpf: str = Form(...),
+    telefone: str = Form(...)
+):
+    cadastrar_usuario(email, senha, cpf, telefone)
 
-@app.get("/destinos.html")
-def pagina_destinos(request: Request):
-    return templates.TemplateResponse(
-        request=request,
-        name="destinos.html",
-        context={
-            "destinos": destinos_pacotes
-        }
+    return RedirectResponse(
+        url="/frontend/login.html",
+        status_code=303
     )
+
+@app.on_event("startup")
+def iniciar_banco():
+    criar_tabela_usuarios()
+
 @app.get("/buscar-passagens", response_class=HTMLResponse)
 def buscar_passagens(request: Request):
     origem = escape(request.query_params.get("origem", "").strip())
