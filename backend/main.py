@@ -514,26 +514,30 @@ informacoes_destinos = {
         "curiosidades": "O metrô de Londres foi inaugurado em 1863."
     }
 }
-@app.get("/destinos.html", response_class=HTMLResponse)
-def pagina_destinos(request: Request):
-    destinos = [
-        informacoes["nome"]
-        for informacoes in informacoes_destinos.values()
-    ]
+
+@app.get("/destino.html", response_class=HTMLResponse)
+def pagina_destino(request: Request, destino: str):
+    informacoes = informacoes_destinos.get(destino)
+
+    if informacoes is None:
+        return HTMLResponse(
+            "<h2>Destino não encontrado.</h2>"
+            '<a href="/destinos.html">Voltar</a>',
+            status_code=404
+        )
 
     return templates.TemplateResponse(
         request=request,
-        name="destinos.html",
-        context={"destinos": destinos}
+        name="destino.html",
+        context={"destino": informacoes}
     )
 
 @app.get("/destinos.html", response_class=HTMLResponse)
 def pagina_destinos(request: Request):
-    destinos = list(informacoes_destinos.keys())
     return templates.TemplateResponse(
         request=request,
         name="destinos.html",
-        context={"destinos": destinos}
+        context={"destinos": informacoes_destinos}
     )
 def main():
     criar_tabela_usuarios()
