@@ -21,18 +21,26 @@
     </header>
 
     <main>
-      <section class="detalhes-destino">
-        <h2>Destinos disponíveis</h2>
+      <section class="secao-destinos">
+        <h2>Explore nossos destinos</h2>
+        <p>Escolha seu próximo destino e comece a planejar sua viagem!</p>
 
-        <ul>
+        <div class="grade-destinos">
           {% for codigo, destino in destinos.items() %}
-          <li>
-            <a href="/destino.html?destino={{ codigo }}">
-              {{ destino.nome }}
-            </a>
-          </li>
+          <a href="/destino.html?destino={{ codigo }}" class="card-destino">
+            <img
+              src="/frontend/{{ destino.imagem }}"
+              alt="{{ destino.nome }}"
+            />
+
+            <div class="info-destino">
+              <h3>{{ destino.nome }}</h3>
+              <p>{{ destino.descricao }}</p>
+              <span>Conhecer destino →</span>
+            </div>
+          </a>
           {% endfor %}
-        </ul>
+        </div>
       </section>
     </main>
 

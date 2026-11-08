@@ -30,9 +30,9 @@ def cadastro(
 ):
     cadastrar_usuario(email, senha, cpf, telefone)
     return RedirectResponse(
-        url="/frontend/login.html",
-        status_code=303
-    )
+    url="/destinos.html",
+    status_code=303
+)
 @app.on_event("startup")
 def iniciar_banco():
     criar_tabela_usuarios()

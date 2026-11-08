@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/frontend/style.css" />
+    <title>Air Travel - {{ destino.nome }}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
+
+      <nav>
+        <a href="/frontend/index.html">Início</a>
+        <a href="#">Passagens</a>
+        <a href="#">Pacotes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pagina-destino">
+        <div class="destino-cabecalho">
+          <span class="destino-tag">SEU PRÓXIMO DESTINO</span>
+
+          <h2>{{ destino.nome }}</h2>
+
+          <p>{{ destino.descricao }}</p>
+        </div>
+
+        <div class="destino-imagem">
+          <img src="/frontend/{{ destino.imagem }}" alt="{{ destino.nome }}" />
+        </div>
+
+        <section class="secao-atracoes">
+          <div class="titulo-secao">
+            <span>EXPLORE</span>
+            <h3>Principais atrações</h3>
+            <p>Conheça alguns dos lugares que tornam esse destino especial.</p>
+          </div>
+
+          <div class="grade-atracoes">
+            {% for atracao in destino.atracoes %}
+            <article class="card-atracao">
+              <span class="numero-atracao">
+                {{ "%02d"|format(loop.index) }}
+              </span>
+
+              <h4>{{ atracao }}</h4>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="curiosidade-destino">
+          <span>VOCÊ SABIA?</span>
+          <h3>Uma curiosidade sobre o destino</h3>
+          <p>{{ destino.curiosidades }}</p>
+        </section>
+
+        <div class="voltar-destinos">
+          <a href="/frontend/index.html" class="botao-voltar">
+            ← Voltar aos destinos
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-conteudo">
+        <div class="footer-logo">
+          <h3>✈ AIR TRAVEL</h3>
+          <p>Sua viagem começa aqui!</p>
+        </div>
+
+        <div class="footer-contato">
+          <p>📧 kaue.c.pereiira@gmail.com</p>
+          <p>📞 (11) 98145-0011</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Air Travel. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

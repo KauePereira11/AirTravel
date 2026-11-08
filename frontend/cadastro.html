@@ -11,6 +11,8 @@
       <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
       <nav>
         <a href="/frontend/index.html">Início</a>
+        <a href="/frontend/destinos.html">Destinos</a>
+        <a href="/frontend/compra.html">Passagens</a>
         <a href="/frontend/login.html">Login</a>
       </nav>
     </header>
@@ -38,6 +40,7 @@
             id="senha"
             name="senha"
             placeholder="Crie uma senha segura"
+            minlength="6"
             required
           />
 
@@ -48,6 +51,7 @@
             name="cpf"
             maxlength="11"
             pattern="[0-9]{11}"
+            inputmode="numeric"
             placeholder="Somente números"
             required
           />
@@ -59,6 +63,7 @@
             name="telefone"
             maxlength="11"
             pattern="[0-9]{11}"
+            inputmode="numeric"
             placeholder="DDD + número"
             required
           />
@@ -71,5 +76,30 @@
         </a>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-conteudo">
+        <div class="footer-logo">
+          <h3>✈ AIR TRAVEL</h3>
+          <p>Sua viagem começa aqui.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="/frontend/index.html">Início</a>
+          <a href="/frontend/destinos.html">Destinos</a>
+          <a href="/frontend/compra.html">Passagens</a>
+          <a href="/frontend/login.html">Login</a>
+        </div>
+
+        <div class="footer-contato">
+          <p>📧 kaue.c.pereiira@gmail.com</p>
+          <p>📱 (11) 98145-0011</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Air Travel. Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>

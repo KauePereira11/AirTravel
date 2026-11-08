@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/frontend/style.css" />
     <title>Air Travel - Comprar passagem</title>
   </head>
 
@@ -12,9 +12,9 @@
       <h1>✈ AIR TRAVEL | Sua viagem começa aqui!</h1>
 
       <nav>
-        <a href="index.html">Início</a>
-        <a href="destinos.html">Destinos</a>
-        <a href="#">Passagens</a>
+        <a href="/frontend/index.html">Início</a>
+        <a href="/frontend/destinos.html">Destinos</a>
+        <a href="/frontend/compra.html">Passagens</a>
         <a href="#">Pacotes</a>
       </nav>
     </header>
@@ -34,6 +34,7 @@
               id="origem"
               name="origem"
               placeholder="Digite sua cidade de origem"
+              required
             />
           </div>
 
@@ -44,6 +45,7 @@
               id="destino"
               name="destino"
               placeholder="Digite seu destino"
+              required
             />
           </div>
 
@@ -64,7 +66,7 @@
           <div class="datas-viagem">
             <div class="campo">
               <label for="data-ida">Data de ida</label>
-              <input type="date" id="data-ida" name="data-ida" />
+              <input type="date" id="data-ida" name="data-ida" required />
             </div>
 
             <div class="campo">
@@ -73,10 +75,10 @@
             </div>
           </div>
 
-          <div class="campo" name="classe">
+          <div class="campo">
             <label for="classe">Classe</label>
 
-            <select id="classe">
+            <select id="classe" name="classe" required>
               <option value="economica">Econômica</option>
               <option value="executiva">Executiva</option>
             </select>
@@ -90,16 +92,13 @@
               id="passageiros"
               name="passageiros"
               min="1"
+              max="9"
               value="1"
+              required
             />
           </div>
 
-          <div class="resumo-compra">
-            <span>Valor da passagem</span>
-            <strong>R$ 2.850</strong>
-          </div>
-
-          <button type="submit">Continuar</button>
+          <button type="submit">Buscar passagens</button>
         </form>
       </section>
     </main>
@@ -112,9 +111,9 @@
         </div>
 
         <div class="footer-links">
-          <a href="index.html">Início</a>
-          <a href="destinos.html">Destinos</a>
-          <a href="#">Passagens</a>
+          <a href="/frontend/index.html">Início</a>
+          <a href="/frontend/destinos.html">Destinos</a>
+          <a href="/frontend/compra.html">Passagens</a>
           <a href="#">Pacotes</a>
         </div>
 
