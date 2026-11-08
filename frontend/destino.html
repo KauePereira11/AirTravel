@@ -57,9 +57,15 @@
           <h3>Uma curiosidade sobre o destino</h3>
           <p>{{ destino.curiosidades }}</p>
         </section>
+        <div class="botoes-destino">
+          <a
+            href="/compra.html?destino={{ destino.nome }}"
+            class="botao-comprar"
+          >
+            Comprar passagem
+          </a>
 
-        <div class="voltar-destinos">
-          <a href="/frontend/index.html" class="botao-voltar">
+          <a href="/frontend/destinos.html" class="botao-voltar">
             ← Voltar aos destinos
           </a>
         </div>

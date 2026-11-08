@@ -36,6 +36,14 @@ def cadastro(
 @app.on_event("startup")
 def iniciar_banco():
     criar_tabela_usuarios()
+
+@app.get("/compra.html", response_class=HTMLResponse)
+def pagina_compra(request: Request, destino: str = ""):
+    return templates.TemplateResponse(
+        request=request,
+        name="compra.html",
+        context={"destino": destino}
+    )    
 @app.get("/buscar-passagens", response_class=HTMLResponse)
 def buscar_passagens(request: Request):
     origem_original = request.query_params.get("origem", "").strip()
@@ -111,7 +119,7 @@ def buscar_passagens(request: Request):
                 <p>{classe_formatada}</p>
                 <p>{quantidade_passageiros} passageiro(s)</p>
             </div>
-            <a href="/frontend/compra.html">Selecionar voo</a>
+            <a href="/confirmar-compra?companhia={companhia}&origem={origem}&destino={destino}&preco={preco}&ida={data_ida_formatada}&volta={data_volta_formatada}&classe={classe_formatada}&passageiros={quantidade_passageiros}&horario={horario_ida}">Selecionar voo</a>
         </div>
         """
 
@@ -134,7 +142,7 @@ def buscar_passagens(request: Request):
             </nav>
         </header>
         <main>
-            <section class="compra-passagem">
+            <section class="resultados-voos">
                 <h2>Voos encontrados</h2>
                 <div class="resumo-busca">
                     <p><strong>Origem:</strong> {origem}</p>
@@ -154,6 +162,25 @@ def buscar_passagens(request: Request):
     </html>
     """
 
+@app.get("/confirmar-compra", response_class=HTMLResponse)
+def confirmar_compra(request: Request):
+    dados_voo = {
+        "companhia": request.query_params.get("companhia", ""),
+        "origem": request.query_params.get("origem", ""),
+        "destino": request.query_params.get("destino", ""),
+        "preco": request.query_params.get("preco", ""),
+        "ida": request.query_params.get("ida", ""),
+        "volta": request.query_params.get("volta", ""),
+        "classe": request.query_params.get("classe", ""),
+        "passageiros": request.query_params.get("passageiros", ""),
+        "horario": request.query_params.get("horario", "")
+    }
+
+    return templates.TemplateResponse(
+        request=request,
+        name="confirmar_compra.html",
+        context={"voo": dados_voo}
+    )
 
 def exibir_nome_do_programa():
     print("=========================================")
@@ -212,6 +239,7 @@ info_pacotes = [
     ["Berlim - The Ritz-Carlton Berlin", 10000],
     ["Berlim - Hilton Berlin", 7500]
 ]
+
 def cadastrar_novo_usuario():
     os.system('cls')
     print('Novo Cadastro.')

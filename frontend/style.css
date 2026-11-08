@@ -735,3 +735,187 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.botoes-destino {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 35px 0;
+}
+
+.botao-comprar,
+.botao-voltar {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-comprar {
+  background-color: #ff7a00;
+  color: white;
+}
+
+.botao-comprar:hover {
+  background-color: #e66d00;
+  transform: translateY(-3px);
+}
+
+.botao-voltar {
+  background-color: #1a1f2b;
+  color: white;
+}
+
+.botao-voltar:hover {
+  background-color: #30394a;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 500px) {
+  .botoes-destino {
+    flex-direction: column;
+  }
+
+  .botoes-destino a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* RESULTADOS DOS VOOS */
+
+.resultados-voos {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+  box-sizing: border-box;
+}
+
+.resultados-voos > h2 {
+  color: #1a1f2b;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resumo-busca {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 22px;
+  margin-bottom: 30px;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+}
+
+.resumo-busca p {
+  margin: 5px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.resumo-busca strong {
+  color: #1a1f2b;
+}
+
+.lista-voos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.voo-card {
+  display: grid;
+  grid-template-columns: 1fr 180px 170px;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.voo-card:hover {
+  border-color: #ff7a00;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+
+.voo-card h3 {
+  color: #1a1f2b;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.voo-card p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.voo-card > div:nth-child(2) h3 {
+  color: #ff7a00;
+  font-size: 23px;
+}
+
+.voo-card a {
+  display: inline-block;
+  padding: 13px 18px;
+  background-color: #ff7a00;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.voo-card a:hover {
+  background-color: #e66d00;
+}
+
+.resultados-voos > a {
+  display: inline-block;
+  margin-top: 25px;
+  color: #1a1f2b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resultados-voos > a:hover {
+  color: #ff7a00;
+}
+
+@media (max-width: 750px) {
+  .resultados-voos {
+    margin: 25px 15px;
+    padding: 20px;
+  }
+
+  .resumo-busca {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .voo-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .voo-card a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 450px) {
+  .resumo-busca {
+    grid-template-columns: 1fr;
+  }
+}
